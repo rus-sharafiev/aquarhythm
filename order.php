@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-$mysqli = new mysqli("localhost", "akvarigu_main", "WjT8&LdO", "akvarigu_main");
+$mysqli = new mysqli("localhost", "", "", "");
 
 $order_phone = $_POST['order_phone'];
 $order_name = $_POST['order_name'];

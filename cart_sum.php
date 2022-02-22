@@ -2,7 +2,7 @@
 
 session_start();
 
-$mysqli = new mysqli("localhost", "akvarigu_main", "WjT8&LdO", "akvarigu_main");
+$mysqli = new mysqli("localhost", "", "", "");
 
 $cart_sum = 0;
 foreach ($_SESSION['order'] as $order) {

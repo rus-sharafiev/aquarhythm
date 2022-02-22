@@ -11,7 +11,7 @@ $key = array_search(Array ( "id" => $cartid), $_SESSION['cart']);
 unset($_SESSION['cart'][$key]);
 unset($_SESSION['order'][$key]);
 
-$mysqli = new mysqli("localhost", "akvarigu_main", "WjT8&LdO", "akvarigu_main");
+$mysqli = new mysqli("localhost", "", "", "");
 if ($_SESSION['cart'] ?? NULL) { ?>
 
 <form id="order-form" autocomplete="off" action="" method="post" class="right">

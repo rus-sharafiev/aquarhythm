@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost", "akvarigu_main", "WjT8&LdO", "akvarigu_main");
+$mysqli = new mysqli("localhost", "", "", "");
 	
 if ($mysqli->connect_errno) {
     echo "Не удалось подключиться к MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
