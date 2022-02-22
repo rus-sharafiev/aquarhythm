@@ -1,0 +1,122 @@
+@charset "utf-8";
+#mainpage {
+	text-align: left;
+    color: black;
+	
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+.type {
+	padding: 10px 10px 20px;
+	max-width: calc((100vw - 100%) + 100% - 160px);
+	min-width: min-content;
+	box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+	border-radius: 14px;
+	background: rgba(255,255,255,0.6);
+	display: grid;
+	grid-template-areas:
+		"name"
+		"cat";
+	grid-template-rows: 50px auto;
+	grid-template-columns: auto;
+	grid-gap: 1px;
+}
+.typename {
+	grid-area: name;
+	margin-top: -15px;
+	padding: 5px 50px;
+	font-size: 26px;
+	font-weight: bold;
+	color: black;
+}
+.categories {
+	grid-area: cat;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(700px, auto));
+	justify-content: center;
+	grid-row-gap: 30px;
+	grid-column-gap: 10px;
+}
+.category {
+	border-radius: 10px;
+	box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+	padding: 10px;
+	margin-left: 10px;
+	background: white;
+	font-size: 20px;
+	display: grid;
+	grid: 250px auto/ 400px auto;
+}
+.category-image {
+	background: rgb(38,59,78);
+	box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+	border-radius: 10px;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	margin: -20px 0 -20px -20px;
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.category-image > object {
+	width: 100%;
+}
+.category-link {
+	margin: -5px;
+	border-radius: 10px;
+	position: absolute;
+	cursor: pointer;
+	width: 420px;
+	height: 290px;
+}
+.category-link:hover {
+	background: rgba(255, 255, 255, 0.1);
+}
+.cat-name {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	margin-left: 3px;
+	display: flex;
+	align-items: flex-start;
+	font-size: 26px;
+	font-weight: normal;
+	line-height: 1;
+	color: white;
+}
+.series {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+	padding-left: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 5px;
+	flex-direction: row;
+	align-content: flex-start;
+}
+.series > a {
+	display: block;
+	border-radius: 7px;
+	/* box-shadow: 0 0.5px 2.5px rgba(0,0,0,0.2); */
+	padding: 3px 10px;
+	line-height: 1;
+	cursor: pointer;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	outline: none;
+	text-decoration: none;
+	color: rgb(38,59,78);
+	font-weight: bold;
+	background: white;
+	text-align: end;
+	width: fit-content;
+}
+.series > a:hover {
+	box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+}

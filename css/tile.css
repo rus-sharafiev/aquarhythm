@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+/* Tile ---------------------------------------*/
+.tile {
+    width: 300px;
+    height: 165px;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 5px;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    color: black;
+    line-height: 0.9;
+    outline: none;
+    text-decoration: none;
+    display: grid;
+    grid: 20px 50px 55px 30px/ 100px 160px 30px;
+    grid-template-areas:
+        "img id id"
+        "img name name"
+        "img add add"
+        "price price cart";
+    grid-gap: 0;
+}
+.tile:hover {
+    box-shadow: 0 1px 20px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.tileid, .tilecat {
+	padding-right: 3px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.tileimage{
+	grid-area: img;
+	width: 100px;
+	height: 120px;
+	display: flex;
+	justify-content: center;
+}
+.tileimage  > img {
+	max-width: 90%;
+	max-height: 90%;
+	align-self: center;
+}
+.tileid {
+	grid-area: id;
+	text-align: right;
+	color: #CCCCCC;
+    font-weight: lighter;
+    font-size: 18px;
+}
+.tilecat {
+	grid-area: cat;
+    text-align: right;
+	color: #CCCCCC;
+    font-size: 14px;
+}
+.tilename {
+	grid-area: name;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    margin: auto 0;
+    padding-left: 5px;
+}
+.tileadd {
+    grid-area: add;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 15px;
+    font-weight: bold;
+    gap: 2px;
+    column-gap: 4px;
+    align-items: flex-start;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+.tileadd > div > span {
+    font-weight: lighter; 
+    font-size: 14px
+}
+#add-to-cart {
+    grid-area: cart;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-to-cart, .remove-from-cart {
+    font-family: 'Material Icons';
+    font-size: 37px;
+    color: #252F3A;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    display: flex;
+    transition: all 0.1s linear;
+	text-align: right;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    padding-right: 6px;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+.add-to-cart {
+    background-color: #F88058;
+}
+.add-to-cart:hover {
+    width: 200px;
+    margin-right: 150px;
+}
+.add-to-cart:after {
+    content: "add_shopping_cart";
+}
+.add-to-cart:before {
+    content: "Добавить в корзину";
+    display: none;
+}
+.add-to-cart:hover:before {
+    display: inline-block;
+	font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    margin-right: 5px;
+}
+.remove-from-cart {
+    background-color: #67AFBE;
+}
+.remove-from-cart:hover {
+    width: 200px;
+    margin-right: 150px;
+}
+.remove-from-cart:after {
+    content: "remove_shopping_cart";
+}
+.remove-from-cart:before {
+    content: "Удалить из корзины";
+    display: none;
+}
+.remove-from-cart:hover:before {
+    display: inline-block;
+	font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    margin-right: 5px;
+}
+.tile-price {
+    grid-area: price;
+    font-size: 30px;
+    font-weight: bold;
+    color: #252F3A;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 20px;
+    padding-top: 5px;
+}
+.tile-link {
+	display: block;
+	position: absolute;
+	width: 250px;
+	height: 150px;
+}

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+@import url("header.css");
+@import url("jquery-ui.css");
+
+/* General */
+
+* { box-sizing: border-box; }
+a { color: inherit; }
+
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+	margin: 0;
+    font-weight: lighter;
+	background: rgb(233,228,226);
+	background: linear-gradient(90deg, rgba(233,228,226,1) 0%, rgba(225,231,232,1) 100%);
+	/*
+	#67AFBE
+	#F88058
+	#252F3A
+	*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	padding-top: 80px;
+	padding-bottom: 20px;
+}
+img {
+	display: block;
+	width: auto;
+	height: auto;
+}
+/*object {
+	width: 100%;
+	height: 100%;
+	pointer-events: none
+}*/
+.hidden {
+	display: none !important;
+}

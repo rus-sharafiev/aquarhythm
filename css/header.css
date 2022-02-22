@@ -1,0 +1,302 @@
+@charset "utf-8";
+
+/* Header -----------------------------------------------------------*/
+header {
+	width: calc((100vw - 100%) + 100% - 50px);
+	left: 25px;
+	right: 25px;
+	min-height: 50px;
+	background: rgba(255, 255, 255, 0.6);
+	backdrop-filter: saturate(150%) blur(10px);
+	-webkit-backdrop-filter: saturate(150%) blur(10px);
+	box-shadow: 0 1.5px 6px rgb(0 0 0 / 20%);
+	transition: all 0.2s linear;
+	border-radius: 7px;
+	position: fixed;
+	z-index: 10;
+	top: 15px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+}
+#logo-space {
+	height: 50px;
+	width: 450px;
+	flex-grow: 1;
+}
+nav {
+	width: 38em;
+    height: 50px;
+    margin: 0 10px 0 0;
+    position: relative;
+	
+	display: flex;
+	flex-grow: 1;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 10px;
+}
+
+/* Logo --------------------------------------------------------------*/
+#logo, #logo-shadow, #logo > div {
+	height: 100px;
+	width: 450px;
+	position: fixed;
+	top: -9px;
+	left: 30px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+#logo {
+	z-index: 11;
+}
+#logo > div {
+	width: 230px;
+	cursor: pointer;
+	z-index: 20;
+}
+#logo-shadow {
+	z-index: 10;
+	filter: drop-shadow(0 1px 3px rgb(0 0 0 / 0.2));
+}
+/* Buttons ----------------------------------------------------------- */
+#catalog, #contacts {
+	border-radius: 7px;
+    height: 30px;
+	width: 4em;
+	padding: 0;
+    font-size: 20px;
+	list-style: none;
+    cursor: pointer;
+	transition: all 0.1s linear;
+    outline: none;
+	text-align: center;
+	border: thin solid transparent;
+}
+#catalog:hover, #contacts:hover, #catalog.active {
+    text-shadow: none;
+	background-color: white;
+	border: thin solid rgba(0,0,0,0.1);
+}
+
+/* Search ------------------------------------------------------------- */
+#searchform {
+    width: 8em;
+    height: 50px;
+    margin: 0;
+	z-index: 20;
+}
+#autocomplete {
+    margin-top: 10px;
+    background-color: transparent;
+	border-radius: 7px;
+    width: 6.5em;
+    height: 30px;
+    float: right;
+    padding: 0 35px 0 10px;
+	transition: all 0.2s linear;
+    position: relative;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    z-index: 20;
+	border: thin solid transparent;
+}
+#autocomplete:hover {
+    background-color: white;
+    position: relative;
+	border: thin solid rgba(0,0,0,0.1);
+}
+#autocomplete:focus {
+	width: 28em;
+	margin-top: 5px;
+	height: 40px;
+    outline: none;
+    background-color: white;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 20;
+    border-radius: 7px;
+	border: thin solid rgba(0,0,0,0.1);
+}
+#autocomplete.ac {
+    box-shadow: none;
+	border-bottom: thin solid transparent;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+    
+}
+#submitbutton, #clearfield {
+    font-style: normal;
+    font-weight: 400;
+    font-family: 'Material Icons';
+    font-size: 22px;
+    background-color: transparent;
+    top: 14px;
+    height: 22px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 20;
+    color: rgba(0,0,0,0.2);
+    transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+	border: none;
+}
+#submitbutton {
+    right: 55px;
+    padding-right: 5px;
+}
+#clearfield {
+    right: 90px;
+    padding-right: 5px;
+	border-right: thin solid rgba(0,0,0,0.1);
+	
+}
+#submitbutton:hover, #clearfield:hover, #shopping-cart:hover {
+	transition: all 0.2s linear;
+    color: black;
+}
+#submitbutton:focus, #clearfield:focus, #shopping-cart:focus {
+    outline: none;
+}
+#show-search-button {
+    display: none;
+}
+
+/*---------------------*/
+
+#shopping-cart {
+    font-family: 'Material Icons';
+    position: relative;
+    font-size: 30px;	
+    cursor: pointer;
+    color: rgba(0,0,0,0.2);
+    background-color: transparent;
+    transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+	border: none;
+}
+#cart-count {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: #67AFBE;
+    position: absolute;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+}
+
+/* Call Form ------------------------------------------------------------*/
+#callform {
+    display: inline-block;
+    transition: all 0.2s linear;
+    position: fixed;
+    height: 130px;
+    width: 21em;
+    bottom: 1vh;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+    border-radius: 14px;
+	border: thin solid rgba(0,0,0,0.1);
+    z-index: 20;
+    background-color: rgba(255, 255, 255, .15);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+.left {
+    right: 1vw;
+}
+.right {
+    right: -18.5em;
+}
+#phone, #name, #callbutton {
+    width: 17em;
+    outline: none;
+    background-color: white;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 20;
+    margin-top: 0;
+    height: 30px;
+    border-radius: 10px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 15px;
+    margin: 10px 0 0 4em;
+    padding-left: 1em;
+    border: none;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+#phone:focus-within, #name:focus-within, #phone:hover, #name:hover, #callbutton:hover {
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+}
+#callbutton {
+    background: #00AFD7;
+    color: black;
+}
+#call {
+    position: absolute;
+    cursor: pointer;
+    height: 3em;
+    width: 130px;
+    left: 0;
+    bottom: -3em;
+    border: none;
+    border-radius: 14px 14px 0 0;
+    transform-origin: left top;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    color: black;
+    background-color: rgba(255, 255, 255, .15);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+#call:hover, #callbutton:hover {
+    background: #F88058;
+}
+#call:focus {
+    outline: none;
+}
+
+/* Catalog -------------------------------------------------------------- */
+#main-menu {
+    width: 100%;
+    margin: 10px;
+    margin-top: 30px;
+}
+#main-menu > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    align-items: center;
+    justify-content: end;
+    gap: 5px;
+}
+#main-menu > div > a {
+    width: 300px;
+    height: 70px;
+    border: thin solid transparent;
+    border-radius: 7px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    outline: none;
+    text-decoration: none;
+    gap: 10px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    color: #252F3A;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+#main-menu > div > a > div , #main-menu > div > a > div > svg{
+    width: 60px;
+    height: 60px;
+}
+#main-menu > div > a:hover {
+    background-color: white;
+}
+
+/* Mobile menu ------------------- */
+#mobile-home, #mobile-contacts, #mobile-search, #mobile-catalogue, #mobile-shopping-cart {display: none}

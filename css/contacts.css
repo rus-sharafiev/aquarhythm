@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+#contactscontainer {
+    width: 15em;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+    border-radius: 14px;
+    background: rgba(255,255,255,0.6);
+    display: grid;
+    grid: auto auto auto auto / auto;
+    grid-template-areas:
+        "address"
+        "phone1"
+        "phone2"
+        "mail";
+    grid-gap: 15px;
+    backdrop-filter: saturate(150%) blur(10px);
+    -webkit-backdrop-filter: saturate(150%) blur(10px);
+    margin-left: calc(100% - 21em - 75px);
+	font-size: 25px;
+    line-height: 1.1;
+}
+
+#contactscontainer > div {
+	display: flex;
+	align-items: center;
+}
+#map {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin-top: -80px;
+}
+#head {
+	grid-area: head;
+	font-size: 24px;
+	font-weight: bold;
+	color: rgba(0,0,0,0.3);
+}
+#address {
+	grid-area: address;
+}
+#phone1 {
+	grid-area: phone1;
+}
+#phone2 {
+	grid-area: phone2;
+}
+#mail {
+	grid-area: mail;
+}
+.phones {
+	border-radius: 10px;
+}
+span {
+	margin: 0 20px;
+	font-family: 'Material Icons';
+	font-size: 30px;
+}
