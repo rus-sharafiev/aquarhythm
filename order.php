@@ -6,7 +6,7 @@ $mysqli = new mysqli("localhost", "root", "", "aquarhythm");
 $order_phone = $_POST['order_phone'];
 $order_name = $_POST['order_name'];
 
-$to = 'srr@live.ru';
+$to = '';
 $subject = 'Заказ от '.$order_name;
 
 $message = "
