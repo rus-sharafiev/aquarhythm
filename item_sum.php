@@ -2,7 +2,7 @@
 session_start();
 
 $id = $_POST['id'];
-$mysqli = new mysqli("localhost", "", "", "");
+$mysqli = new mysqli("localhost", "root", "", "aquarhythm");
 
 foreach ($_SESSION['order'] as $order) {
 	if ($order['id'] == $id) {

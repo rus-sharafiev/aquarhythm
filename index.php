@@ -48,14 +48,18 @@ if ($searchresult = $mysqli->query($query)) {
 						<object data="/<?php echo $path; ?>/image.svg"></object>
 						<div class="category-link" onClick="window.location='/<?php echo $path; ?>/';"></div>
 					</div>
-					<div class="series"><?php
+					<div class="series">
+						<div><?php
 						foreach ($serArray as list($a, $b, $c)) {
 							if ($a == $cat) {?>
 								<a href='<?php echo $c; ?>'>
 									<?php printf ($b); ?>
 								</a><?php
 							}
-						};?>
+						};?></div>
+						<div><?php
+							echo file_get_contents('./index_text/'.$path.'.txt');
+						?></div>
 					</div>
 				</div><?php
 			};?>
