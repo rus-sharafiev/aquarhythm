@@ -5,7 +5,7 @@
 /* Tile ---------------------------------------*/
 #item-container {
     display: grid;
-    grid: 320px 130px / 100px 810px;
+    grid: 320px 100px / 100px 810px;
     justify-content: center;
     align-items: start;
     padding: 10px;
@@ -133,26 +133,27 @@
     font-family: 'Material Icons';
     font-size: 37px;
     color: #252F3A;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     cursor: pointer;
     border: none;
-    border-radius: 30px;
+    border-radius: 35px;
     display: flex;
-    transition: all 0.1s linear;
-	text-align: right;
+    transition: all 0.2s cubic-bezier(0.23, 1, 0.320, 1);
+    text-align: right;
     align-items: center;
     justify-content: flex-end;
     position: absolute;
-    padding-right: 6px;
-	box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    padding-right: 15px;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 20%);
 }
 .add-to-cart {
     background-color: #F88058;
 }
+.remove-from-cart:hover,
 .add-to-cart:hover {
     width: 200px;
-    margin-right: 150px;
+    margin-right: 130px;
 }
 .add-to-cart:after {
     content: "add_shopping_cart";
@@ -169,10 +170,6 @@
 }
 .remove-from-cart {
     background-color: #67AFBE;
-}
-.remove-from-cart:hover {
-    width: 200px;
-    margin-right: 150px;
 }
 .remove-from-cart:after {
     content: "remove_shopping_cart";
@@ -197,13 +194,15 @@
     justify-content: center;
 }
 #item-series-info {
-    grid-row-start: 2;
-    grid-column-start: 2;
-    height: 130px;
-	padding: 20px 20px;
-	box-shadow: 0 1px 5px rgba(0,0,0,0.2);
-	border-radius: 10px;
-	background: rgba(255, 255, 255, 0.3);
+    grid-row: 2 / -1;
+    grid-column: 2 / -1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     outline: none;
     text-decoration: none;
@@ -223,4 +222,11 @@
     padding: 20px 20px;
     margin: -30px 0 0;
     opacity: 0.8;
+}
+#item-series-spec > div {
+    position: absolute;
+    margin: 440px 0 0;
+    width: 880px;
+    height: 200px;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
 }

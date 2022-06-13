@@ -98,7 +98,7 @@
     border: none;
     border-radius: 30px;
     display: flex;
-    transition: all 0.1s linear;
+    transition: all 0.1s cubic-bezier(0.23, 1, 0.320, 1);
 	text-align: right;
     align-items: center;
     justify-content: flex-end;

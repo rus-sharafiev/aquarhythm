@@ -122,12 +122,13 @@ while ($stmt->fetch()) { ?>
 		</div>
 	</div>
 	<a id="item-series-info" href="<?php echo $dir?>">
-		<?php printf ($category); ?>&ensp;<span style="font-size: 35px; font-weight: bold"><?php printf ($series); ?></span><br><br>
+		<div><?php printf ($category); ?>&ensp;<span style="font-size: 35px; font-weight: bold"><?php printf ($series); ?></span></div>
 		Другие продукты линейки, подробное описание, характеристики, графики, размеры
 	</a>
 	<div id="item-series-spec">
+		<div></div>
 		<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].$dir.'spec.svg') ?>
-	</div> 
+	</div>
 </div>
 <?php
 }
