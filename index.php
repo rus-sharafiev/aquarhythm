@@ -58,8 +58,11 @@ if ($searchresult = $mysqli->query($query)) {
 							}
 						};?></div>
 						<div><?php
-							echo file_get_contents('./index_text/'.$path.'.txt');
-						?></div>
+							echo file_get_contents('./index_content/'.$path.'.txt');
+						?></div>				
+					</div>					
+					<div>					
+						<img src='./index_content/<?php echo $path; ?>.png'></img>
 					</div>
 				</div><?php
 			};?>

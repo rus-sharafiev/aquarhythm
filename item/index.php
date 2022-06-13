@@ -125,6 +125,9 @@ while ($stmt->fetch()) { ?>
 		<?php printf ($category); ?>&ensp;<span style="font-size: 35px; font-weight: bold"><?php printf ($series); ?></span><br><br>
 		Другие продукты линейки, подробное описание, характеристики, графики, размеры
 	</a>
+	<div id="item-series-spec">
+		<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].$dir.'spec.svg') ?>
+	</div> 
 </div>
 <?php
 }
