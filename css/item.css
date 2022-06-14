@@ -230,3 +230,6 @@
     height: 200px;
     background: linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 100%);
 }
+image {
+    display: none;
+}
